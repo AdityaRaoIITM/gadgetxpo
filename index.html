@@ -141,7 +141,7 @@
 
         .faculty-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted slightly for image space */
             gap: 20px;
             margin-top: 20px;
         }
@@ -151,6 +151,32 @@
             padding: 20px;
             border-radius: 15px;
             border-left: 4px solid var(--neon-blue);
+            /* Added for image layout */
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        /* New CSS for Professor Images */
+        .prof-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid transparent;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .prof-img:hover {
+            transform: scale(1.15);
+            box-shadow: 0 0 15px var(--neon-blue);
+            border-color: var(--neon-blue);
+        }
+
+        .faculty-info {
+            display: flex;
+            flex-direction: column;
         }
 
         .dept {
@@ -181,7 +207,6 @@
         footer { text-align: center; padding: 40px; color: var(--text-gray); font-size: 0.9rem; }
     </style>
 </head>
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CBYCR8GYKM"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -201,7 +226,6 @@
         <a href="#evaluation">Criteria</a>
         <a href="gadgetxpo_jan_2026.html">Finalists</a>
         <a href="https://webots.cloud/Acx_4I7">Simulation</a>
-        <!--<a href="https://easyeda.com/editor#id=0948e0d5c91544899173db0bd4dd9e79|693669ead9c146d68d892b4615b715c7">EDA Tools</a>-->
         <a href="#comingsoon">Team</a>
     </nav>
                 <a href="https://iitmparadox.org/events/17" target="_blank" rel="noopener noreferrer" class="w-60 px-8 py-3 bg-[var(--ochre)] text-black font-bold rounded-full hover:bg-yellow-600 transition-all uppercase tracking-widest text-sm shadow-[0_0_20px_rgba(218,165,32,0.4)] text-center">
@@ -213,8 +237,7 @@
         <h1 class="hero-title">Gadget<span class="xpo">Xpo</span></h1>
         <div class="logo-box">
             <img src="gadgetxpo.jpg" width="300" height="300" border="0">
-            <!-- <span style="font-weight: bold; text-align: center;">GADGET<br><span class="xpo">XPO</span><br>LOGO</span> -->
-        </div>
+            </div>
         <p style="margin-top: 20px; letter-spacing: 5px; color: var(--text-gray);">PARADOX '26 • MARGAZHI '26</p>
     </header>
 
@@ -251,40 +274,59 @@
             <h2>Our Distinguished Judges</h2>
             <div class="faculty-grid">
                 <div class="faculty-card">
-                    <strong>Prof. Boby George</strong>
-                    <span class="dept">HoD BS in Electronic Systems, Electrical Engineering Dept, IIT Madras</span>
-                     <a href="https://home.iitm.ac.in/boby/">https://home.iitm.ac.in/boby/</a>                    
+                    <img src="boby.jpg" alt="Boby George" class="prof-img">
+                    <div class="faculty-info">
+                        <strong>Prof. Boby George</strong>
+                        <span class="dept">HoD BS in Electronic Systems, Electrical Engineering Dept, IIT Madras</span>
+                         <a href="https://home.iitm.ac.in/boby/">https://home.iitm.ac.in/boby/</a>
+                    </div>
                 </div>
                 <div class="faculty-card">
-                    <strong>Prof. S Aniruddhan</strong>
-                    <span class="dept">Electrical Engineering Dept, IIT Madras</span>
-                    <a href="https://www.ee.iitm.ac.in/ani/">https://www.ee.iitm.ac.in/ani/</a>
+                    <img src="aniruddhan.jpg" alt="S Aniruddhan" class="prof-img">
+                    <div class="faculty-info">
+                        <strong>Prof. S Aniruddhan</strong>
+                        <span class="dept">Electrical Engineering Dept, IIT Madras</span>
+                        <a href="https://www.ee.iitm.ac.in/ani/">https://www.ee.iitm.ac.in/ani/</a>
+                    </div>
                 </div>
                 <div class="faculty-card">
-                    <strong>Prof. Janakiraman Viraraghavan</strong>
-                    <span class="dept">Electrical Engineering Dept, IIT Madras</span>
-                    <a href="https://www.ee.iitm.ac.in/janakiraman/">https://www.ee.iitm.ac.in/janakiraman/</a>
-                    
+                    <img src="janakiraman.jpg" alt="Janakiraman Viraraghavan" class="prof-img">
+                    <div class="faculty-info">
+                        <strong>Prof. Janakiraman Viraraghavan</strong>
+                        <span class="dept">Electrical Engineering Dept, IIT Madras</span>
+                        <a href="https://www.ee.iitm.ac.in/janakiraman/">https://www.ee.iitm.ac.in/janakiraman/</a>
+                    </div>
                 </div>
                 <div class="faculty-card">
-                    <strong>Prof. Nitin Chandrachoodan</strong>
-                    <span class="dept">Computer Sciences Dept, IIT Madras</span>
-                    <a href="https://chandrachoodan.gitlab.io/">https://chandrachoodan.gitlab.io/</a>
+                    <img src="nitin.jpg" alt="Nitin Chandrachoodan" class="prof-img">
+                    <div class="faculty-info">
+                        <strong>Prof. Nitin Chandrachoodan</strong>
+                        <span class="dept">Computer Sciences Dept, IIT Madras</span>
+                        <a href="https://chandrachoodan.gitlab.io/">https://chandrachoodan.gitlab.io/</a>
+                    </div>
                 </div>
                 <div class="faculty-card">
-                    <strong>Prof. Ramprasath S</strong>
-                    <span class="dept">Electrical Engineering Dept, IIT Madras</span>
-                    <a href="https://srampras.github.io/">https://srampras.github.io/</a>                    
+                    <img src="ramprasath.jpg" alt="Ramprasath S" class="prof-img">
+                    <div class="faculty-info">
+                        <strong>Prof. Ramprasath S</strong>
+                        <span class="dept">Electrical Engineering Dept, IIT Madras</span>
+                        <a href="https://srampras.github.io/">https://srampras.github.io/</a>
+                    </div>
                 </div>
                 <div class="faculty-card">
-                    <strong>Prof. Raveesh Magod</strong>
-                    <span class="dept">Electrical Engineering Dept, IIT Madras</span>
-                    <a href="https://www.ee.iitm.ac.in/people/?stream=EE-6">https://www.ee.iitm.ac.in/people/?stream=EE-6</a>
-                    
+                    <img src="raveesh.jpg" alt="Raveesh Magod" class="prof-img">
+                    <div class="faculty-info">
+                        <strong>Prof. Raveesh Magod</strong>
+                        <span class="dept">Electrical Engineering Dept, IIT Madras</span>
+                        <a href="https://www.ee.iitm.ac.in/people/?stream=EE-6">https://www.ee.iitm.ac.in/people/?stream=EE-6</a>
+                    </div>
                 </div>
                 <div class="faculty-card">
-                    <strong>Electrical Engineering Department, IIT Madras</strong>
-                    <span class="dept"><a href="https://www.ee.iitm.ac.in/people/?stream=EE-6">https://www.ee.iitm.ac.in/people/?stream=EE-6</a></span>
+                    <img src="ee.jpg" alt="Electrical Engineering Department" class="prof-img">
+                    <div class="faculty-info">
+                        <strong>Electrical Engineering Department, IIT Madras</strong>
+                        <span class="dept"><a href="https://www.ee.iitm.ac.in/people/?stream=EE-6">https://www.ee.iitm.ac.in/people/?stream=EE-6</a></span>
+                    </div>
                 </div>
             </div>
         </section>
